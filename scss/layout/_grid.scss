@@ -1,0 +1,39 @@
+
+.row {
+  @include clearfix;
+  @include size(100% 200px);
+  display: flex;
+  justify-content: flex-end;
+  * {
+    margin: 5px;
+    border: 1px solid black;
+    box-shadow: 0 2px 1px gray;
+    align-items: stretch;
+  }
+}
+
+.box-one {
+  flex-grow: 2;
+  background: $blue;
+}
+
+.box-two, .box-three {
+  flex-grow: 1;
+}
+
+.two * {
+  flex-grow: 1;
+}
+
+.one .box-one, .two .box-two, .three .box-three {
+  background: $blue;
+}
+.one .box-two, .two .box-three {
+    background: $yellow;
+}
+.one .box-three, .three .box-one {
+    background: $green;
+}
+.two .box-one, .three .box-two {
+  background: $red;
+}

@@ -5,40 +5,38 @@ html {
   box-sizing: inherit; }
 
 .row {
-  height: 200px;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end; }
   .row::after {
     clear: both;
     content: "";
     display: block; }
-  .row * {
-    margin: 5px;
-    border: 1px solid black;
+  .row .box {
+    margin: .4em;
+    border: 2px solid black;
     box-shadow: 0 2px 1px gray;
-    align-items: stretch; }
+    height: 200px; }
 
-.box-one {
-  flex-grow: 2;
-  background: #5F9EA0; }
-
-.box-two, .box-three {
+.box {
+  flex-basis: 212px;
   flex-grow: 1; }
 
-.two * {
-  flex-grow: 1; }
+.one, .seven {
+  flex-basis: 412px;
+  flex-grow: 2; }
 
-.one .box-one, .two .box-two, .three .box-three {
+.one, .five, .nine {
   background: #5F9EA0; }
 
-.one .box-two, .two .box-three {
+.two, .six {
   background: #F5DEB3; }
 
-.one .box-three, .three .box-one {
+.three, .seven {
   background: #2E8B57; }
 
-.two .box-one, .three .box-two {
+.four, .eight {
   background: #FA8072; }
 
 /*# sourceMappingURL=main.css.map */
